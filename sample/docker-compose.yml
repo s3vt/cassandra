@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  cassandra:
+    image: s3vt/cassandra:3.11.13-8
+    expose:
+      - "7199"
+      - "7000"
+      - "7001"
+      - "9042"
+      - "9160"
+    env_file:
+      - cassandra.env
+    restart: on-failure
