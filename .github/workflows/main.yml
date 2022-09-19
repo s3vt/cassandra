@@ -30,7 +30,7 @@ jobs:
             OPENJRE_VERSION=${{ matrix.jre_ver }}
             CASSANDRA_VERSION=${{ matrix.cassandra_ver }}
           push: true
-          tags: s3vt:cassandra:${{ matrix.cassandra_ver }}-${{ matrix.jre_ver }}
+          tags: s3vt/cassandra:${{ matrix.cassandra_ver }}-${{ matrix.jre_ver }}
   update-readme:
     runs-on: ubuntu-latest
     needs: [pushimage]
