@@ -3,10 +3,11 @@ name: push_image
 on:
   push:
     branches:
-      - "master"
+      - "main"
     paths:
       - Dockerfile
       - start_cassandra.sh
+  workflow_dispatch:    
 
 jobs:
   pushimage:
