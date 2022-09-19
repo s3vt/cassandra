@@ -1,0 +1,45 @@
+name: push_image
+
+on:
+  push:
+    branches:
+      - "master"
+    paths:
+      - Dockerfile
+      - start_cassandra.sh
+
+jobs:
+  pushimage:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        jre_ver: [8]
+        cassandra_ver: [3.11.13, 4.0.6]
+    steps:
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          build-args: |
+            OPENJRE_VERSION=${{ matrix.jre_ver }}
+            CASSANDRA_VERSION=${{ matrix.cassandra_ver }}
+          push: true
+          tags: s3vt:cassandra:${{ matrix.cassandra_ver }}-${{ matrix.jre_ver }}
+  update-readme:
+    runs-on: ubuntu-latest
+    needs: [pushimage]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Docker Hub Description
+        uses: peter-evans/dockerhub-description@v3.1.0
+        with: 
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: s3vt/cassandra
+          short-description: ${{ github.event.repository.description }}
+          
