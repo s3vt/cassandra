@@ -1,22 +1,22 @@
 # cassandra-alpine
-Low profile Cassandra image on [s3vt/java](https://hub.docker.com/r/s3vt/java) image 
+Low profile Cassandra image on [vsapan/java](https://hub.docker.com/r/vsapan/java) image 
 
 **Does not support cqlsh**
 
 ## Naming 
 Images are named as
 
-    s3vt/cassandra:<Cassandra version>-<Open Jre version>
+    vsapan/cassandra:<Cassandra version>-<Open Jre version>
 
 e.g.
 
-    s3vt/cassandra:4.0.1-8
+    vsapan/cassandra:4.0.1-8
 
 ## Using this image
 
-Images are hosted at [DockerHub](https://hub.docker.com/repository/docker/s3vt/cassandra/tags)
+Images are hosted at [DockerHub](https://hub.docker.com/repository/docker/vsapan/cassandra/tags)
 
-    docker pull s3vt/cassandra:4.0.1-8
+    docker pull vsapan/cassandra:4.0.1-8
 
 Configuration
 
@@ -37,4 +37,4 @@ Set below variables and required values in environment. [Sample](sample)
 
 ## Source Code
 
-https://github.com/s3vt/cassandra
+https://github.com/vsapan/cassandra
