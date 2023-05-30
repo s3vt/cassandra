@@ -9,7 +9,7 @@ image:
 			docker build \
 			--build-arg OPENJRE_VERSION=$$openjre \
 			--build-arg CASSANDRA_VERSION=$$cassa \
-			-t vsapan/cassandra:$$cassa-$$openjre \
+			-t vsaps/cassandra:$$cassa-$$openjre \
 			-f DockerfileLocal \
 			.; \
 		done;\
