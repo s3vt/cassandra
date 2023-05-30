@@ -6,11 +6,11 @@ Low profile Cassandra image on [vsapan/java](https://hub.docker.com/r/vsapan/jav
 ## Naming 
 Images are named as
 
-    vsapan/cassandra:<Cassandra version>-<Open Jre version>
+    vsaps/cassandra:<Cassandra version>-<Open Jre version>
 
 e.g.
 
-    vsapan/cassandra:4.0.1-8
+    vsaps/cassandra:4.0.1-8
 
 ## Using this image
 
@@ -37,4 +37,4 @@ Set below variables and required values in environment. [Sample](sample)
 
 ## Source Code
 
-https://github.com/vsapan/cassandra
+https://github.com/sapvs/cassandra
