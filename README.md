@@ -1,5 +1,5 @@
 # cassandra-alpine
-Low profile Cassandra image on [vsapan/java](https://hub.docker.com/r/vsapan/java) image 
+Low profile Cassandra image on [vsaps/java](https://hub.docker.com/r/vsaps/java) image 
 
 **Does not support cqlsh**
 
@@ -14,7 +14,7 @@ e.g.
 
 ## Using this image
 
-Images are hosted at [DockerHub](https://hub.docker.com/repository/docker/vsapan/cassandra/tags)
+Images are hosted at [DockerHub](https://hub.docker.com/repository/docker/vsaps/cassandra/tags)
 
     docker pull vsapan/cassandra:4.0.1-8
 
