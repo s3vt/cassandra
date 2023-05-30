@@ -1,7 +1,7 @@
 ARG OPENJRE_VERSION
-FROM vsapan/java:${OPENJRE_VERSION}
+FROM vsaps/java:${OPENJRE_VERSION}
 
-LABEL repo="https://github.com/vsapan/cassandra"
+LABEL repo="https://github.com/vsaps/cassandra"
 
 ARG CASSANDRA_VERSION
 RUN mkdir /opt/cassandra
