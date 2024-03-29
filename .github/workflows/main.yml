@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         jre_ver: [8]
-        cassandra_ver: [3.11.15, 4.1.2]
+        cassandra_ver: [3.11.16, 4.1.4]
     steps:
       - name: Login to DockerHub
         uses: docker/login-action@v2
